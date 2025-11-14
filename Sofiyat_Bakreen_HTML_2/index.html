@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apollo Corp Job Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    header, nav, section, article, aside, footer {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    nav a {
+      margin-right: 10px;
+    }
+    input, select, textarea {
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 250px;
+    }
+    .checkbox-group, .radio-group {
+      margin-bottom: 10px;
+    }
+    .checkbox-group div, .radio-group div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    figure {
+      margin: 10px 0;
+      text-align: center;
+    }
+    figure img {
+      width: 150px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with navigation -->
+  <header>
+    <h1>Apollo Corp Job Application</h1>
+    <p>Recruiting for various IT positions</p>
+    <nav>
+      <a href="#application-form">Apply</a>
+      <a href="#positions">Positions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Motivational quote -->
+  <aside>
+    <blockquote>"Success usually comes to those who are too busy to be looking for it." – Henry David Thoreau</blockquote>
+  </aside>
+
+  <!-- Job Positions Section -->
+  <section id="positions">
+    <article>
+      <h2>Available IT Positions</h2>
+      <p>We are hiring for Web Developer, UX Designer, Data Analyst, and System Administrator.</p>
+    </article>
+  </section>
+
+  <!-- Job Application Form -->
+  <section id="application-form">
+    <h2>Application Form</h2>
+    <form action="/submit" method="POST" autocomplete="on" aria-label="Apollo Corp Job Application Form">
+      <!-- Text Inputs -->
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your Name" required minlength="3" maxlength="50" pattern="[a-zA-Z\s]+">
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="you@example.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+      <!-- Password -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required minlength="8" maxlength="15">
+
+      <!-- Number -->
+      <label for="experience">Years of Experience:</label>
+      <input type="number" id="experience" name="experience" min="0" max="40" required>
+
+      <!-- Range -->
+      <label for="salary">Expected Salary ($):</label>
+      <input type="range" id="salary" name="salary" min="30000" max="200000" step="1000">
+
+      <!-- Checkboxes -->
+      <label>Job Preferences:</label>
+      <div class="checkbox-group">
+        <div>
+          <input type="checkbox" id="remote" name="jobpref" value="remote">
+          <label for="remote" style="margin-left:5px;">Remote Work</label>
+        </div>
+        <div>
+          <input type="checkbox" id="onprem" name="jobpref" value="onprem">
+          <label for="onprem" style="margin-left:5px;">On Premises</label>
+        </div>
+        <div>
+          <input type="checkbox" id="parttime" name="jobpref" value="parttime">
+          <label for="parttime" style="margin-left:5px;">Part-Time</label>
+        </div>
+      </div>
+
+      <!-- Radio Buttons -->
+      <label>Job Type:</label>
+      <div class="radio-group">
+        <div>
+          <input type="radio" id="internship" name="jobtype" value="internship">
+          <label for="internship" style="margin-left:5px;">Internship</label>
+        </div>
+        <div>
+          <input type="radio" id="permanent" name="jobtype" value="permanent">
+          <label for="permanent" style="margin-left:5px;">Permanent</label>
+        </div>
+      </div>
+
+      <!-- Dropdown -->
+      <label for="position">Position Applying For:</label>
+      <select id="position" name="position">
+        <option value="developer">Web Developer</option>
+        <option value="designer">UX Designer</option>
+        <option value="data">Data Analyst</option>
+        <option value="sysadmin">System Administrator</option>
+      </select>
+
+      <!-- Datalist -->
+      <label for="city">Preferred Location:</label>
+      <input list="cities" id="city" name="city">
+      <datalist id="cities">
+        <option value="New York">
+        <option value="San Francisco">
+        <option value="Remote">
+      </datalist>
+
+      <!-- Textarea -->
+      <label for="coverletter">Cover Letter:</label>
+      <textarea id="coverletter" name="coverletter" rows="4" cols="40" placeholder="Write your cover letter here"></textarea>
+
+      <!-- Disabled & Readonly -->
+      <label for="refcode">Referral Code (readonly):</label>
+      <input type="text" id="refcode" name="refcode" value="REF2025" readonly>
+
+      <label for="promotion">Promotional Code (disabled):</label>
+      <input type="text" id="promotion" name="promotion" placeholder="N/A" disabled>
+
+      <!-- Submit -->
+      <input type="submit" value="Send">
+    </form>
+  </section>
+
+  <!-- Media Section with Apollo Logo -->
+  <section>
+    <h2>Apollo Corp Media</h2>
+    <figure>
+      <img src="apollo-logo.png" alt="Apollo Corp Logo">
+      <figcaption>Official Apollo Logo</figcaption>
+    </figure>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Contact: hr@apollocorp.com</p>
+    <p>&copy; 2025 Apollo Corp</p>
+  </footer>
+</body>
+</html>
