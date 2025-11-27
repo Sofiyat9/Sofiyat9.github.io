@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apollo Corp Job Application</title>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Internal CSS -->
+  <style>
+    /* Internal CSS: footer background */
+    footer {
+      background-color: #e0f7fa;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1 id="main-title">Apollo Corp Job Application</h1>
+      <p class="green bold">Recruiting for various IT positions</p>
+
+      <nav class="menu">
+        <a href="#application-form" style="color: orange; font-weight: bold;">
+          Apply
+        </a>
+        <!-- Inline CSS applied to highlight the "Apply" link -->
+        <a href="#positions">Positions</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Quote -->
+    <p class="quote">
+      "Success usually comes to those who are too busy to be looking for it." – Henry David Thoreau
+    </p>
+
+    <!-- Positions -->
+    <section id="positions" class="form-card">
+      <h2>Available IT Positions</h2>
+      <p>We are hiring for Web Developer, UX Designer, Data Analyst, and System Administrator.</p>
+    </section>
+
+    <!-- Application Form -->
+    <section id="application-form" class="form-card">
+      <h2>Application Form</h2>
+
+      <form action="/submit" method="POST" autocomplete="on">
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="experience">Years of Experience:</label>
+        <input type="number" id="experience" name="experience">
+
+        <label for="salary">Expected Salary Range:</label>
+        <input type="range" id="salary" name="salary" min="30000" max="200000">
+        <span class="range-value">3000 €/month</span>
+
+        <label>Job Preferences:</label>
+        <div class="checkbox-group">
+          <div><input type="checkbox"> Remote Work</div>
+          <div><input type="checkbox"> On Premises</div>
+          <div><input type="checkbox"> Part-Time</div>
+        </div>
+
+        <label>Job Type:</label>
+        <div class="radio-group">
+          <div><input type="radio"> Internship</div>
+          <div><input type="radio"> Permanent</div>
+        </div>
+
+        <label for="position">Position Applying For:</label>
+        <select id="position" name="position">
+          <option>Web Developer</option>
+          <option>UX Designer</option>
+          <option>Data Analyst</option>
+          <option>System Administrator</option>
+        </select>
+
+        <label for="city">Preferred Location:</label>
+        <input list="cities" id="city" name="city">
+        <datalist id="cities">
+          <option value="New York">
+          <option value="San Francisco">
+          <option value="Remote">
+        </datalist>
+
+        <label for="coverletter">Motivation Letter:</label>
+        <textarea id="coverletter" name="coverletter" rows="4"></textarea>
+
+        <label for="refcode">Referral Code (readonly):</label>
+        <input type="text" id="refcode" value="REF2025" readonly>
+
+        <label for="promotion">Promotional Code (disabled):</label>
+        <input type="text" id="promotion" disabled>
+
+        <input type="submit" value="Send Application">
+
+      </form>
+    </section>
+
+    <!-- Checklist -->
+    <div class="checklist-box">
+      <h3>Checklist</h3>
+      <ul>
+        <li>Bring updated CV</li>
+        <li>Prepare references</li>
+        <li>Check Apollo career portal</li>
+      </ul>
+    </div>
+
+    <!-- Logo -->
+    <figure>
+      <img src="apollo-logo.png" alt="Apollo Logo">
+    </figure>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <p>Contact: hr@apollocorp.com</p>
+      <p>&copy; 2025 Apollo Corp</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+

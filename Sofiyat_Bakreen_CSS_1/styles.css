@@ -1,0 +1,177 @@
+/* =========================================
+   Reset Defaults
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PAGE LAYOUT 
+========================================= */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  opacity: 0.97;
+  text-align: center;
+  background-image: none; 
+}
+
+/* Page wrapper to center content */
+.container {
+  width: 90%;
+  max-width: 850px;
+  margin: 30px auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+header {
+  background-color: #ffffff !important;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+}
+
+nav a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #0055aa;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   FORM CARD 
+========================================= */
+.form-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 70%;
+  min-width: 300px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.08);
+}
+
+/* =========================================
+   FORM ELEMENTS
+========================================= */
+form {
+  text-align: left;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+input:focus {
+  border-color: #0077cc;
+}
+
+input:disabled {
+  background-color: #eee;
+}
+
+/* Salary range text */
+.range-value {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+/* Checkboxes & Radio Layout */
+.checkbox-group div,
+.radio-group div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.checkbox-group input,
+.radio-group input {
+  width: auto;
+  margin-right: 8px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+  background-color: #003f88;
+}
+
+/* =========================================
+   QUOTE SECTION 
+========================================= */
+.quote {
+  color: #cc0000;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+/* =========================================
+   CHECKLIST SECTION
+========================================= */
+.checklist-box {
+  background-color: #eafff2;
+  margin: 25px auto;
+  padding: 18px;
+  width: 60%;
+  border-radius: 10px;
+  border: 1px solid #a3e0c3;
+  text-align: left;
+}
+
+.checklist-box ul {
+  margin-top: 8px;
+}
+
+.checklist-box li {
+  margin-bottom: 5px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer p {
+  margin: 4px 0;
+}
+
+figure {
+  margin-top: 20px;
+}
+
+img {
+  width: 150px;
+  height: auto;
+}
+
+.hidden-table {
+  visibility: hidden;
+}
