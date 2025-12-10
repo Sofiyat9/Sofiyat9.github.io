@@ -1,0 +1,326 @@
+/*
+===================================================
+  1. CSS RESET (For Consistency Across Browsers)
+===================================================
+*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding/border are included in the element's total width/height */
+}
+
+/* Set default font size and line height on the root */
+html {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Reset image display for better layout control */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Reset lists */
+ul, ol {
+    list-style: none;
+}
+
+/*
+===================================================
+ CSS Comments: Explanatory Comments 
+===================================================
+*/
+/* This style uses fixed positioning for the main navigation */
+/* This style uses relative positioning to raise the center artwork (see .relative-art) */
+/* The .absolute-overlay uses absolute positioning (child of .absolute-parent) */
+/* The .float-art uses float: right */
+/* The .sticky-art uses sticky positioning, sticking to the top edge */
+/* The .clearfix uses clear: both to stop content wrapping */
+
+
+/*
+===================================================
+  GLOBAL STYLES AND WEB FONTS
+===================================================
+*/
+
+body {
+    /* Typography: font-family with fallback stack (REQUIRED) */
+    font-family: 'Poppins', Verdana, sans-serif;
+    /* Reset applied via the * selector, keeping custom background here */
+    /* Color Styling: HSL - Soft green background (Nature Theme) */
+    background-color: hsl(120, 60%, 97%); 
+    color: #444;
+    /* Typography: line-height (REQUIRED) */
+    line-height: 1.7; 
+}
+
+/* -------------------------
+   NAVIGATION & TOP BAR
+------------------------- */
+
+.top-nav {
+    text-align: center;
+    padding: 15px 0 5px;
+    margin-bottom: 20px;
+    /* position: static (Default position for this bar) */
+    position: static; 
+}
+
+/* display: inline (REQUIRED) */
+.nav-link, .nav-separator {
+    display: inline;
+    text-decoration: none;
+    /* Color Styling: Named Color (REQUIRED - Nature adaptation) */
+    color: darkgreen; 
+    /* Typography: font-weight numeric value (REQUIRED) */
+    font-weight: 400; 
+}
+
+.nav-separator {
+    /* Color Styling: RGB (REQUIRED) */
+    color: rgb(150, 150, 150); 
+    margin: 0 5px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Typography: letter-spacing & text-transform (REQUIRED) */
+.header h1 {
+    /* Color Styling: Named Color (Nature Theme) */
+    color: forestgreen;
+    letter-spacing: 0.3em;
+    font-size: 2em;
+    text-transform: uppercase; 
+}
+
+/* -------------------------
+   GALLERY LAYOUT & POSITIONING
+------------------------- */
+
+.gallery-container {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    /* 1. display: block (REQUIRED) */
+    display: block; 
+}
+
+/* Container for relative positioning */
+/* position: relative (REQUIRED) */
+.relative-container {
+    position: relative; 
+    /*  display: block (REQUIRED) */
+    display: block; 
+    margin-bottom: 40px;
+}
+
+/* All Artwork figures */
+.art {
+    position: static; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Standard width for all images (art 1-10) */
+    width: 250px; 
+    margin: 10px 15px 40px;
+    transition: transform 0.3s ease; /* Keep transition for hover effect */
+}
+
+.art img {
+    width: 100%;
+    height: auto;
+    /* 1. display: block (REQUIRED) */
+    display: block; 
+}
+
+/* display: inline-block (REQUIRED) - Used for horizontal alignment */
+.inline-block-art {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Basic hover effect for ALL art figures now */
+.art:hover {
+    transform: scale(1.03); /* Slight scale up for interaction */
+}
+
+/* --- Relative Positioning Demonstration (Artwork 3) --- */
+/* position: relative & top & left & z-index (REQUIRED) */
+.relative-art {
+    /* Comment: This artwork uses relative positioning */
+    position: relative; 
+    /* top, left (REQUIRED) */
+    top: -20px; 
+    left: 20px; 
+    /*  z-index (REQUIRED) */
+    z-index: 50; 
+}
+.relative-caption {
+    /* Color Styling: RGBA - Opacity demonstration */
+    background-color: rgba(144, 238, 144, 0.8); /* Light green with opacity */
+}
+
+/* --- Absolute Positioning Demonstration (Artwork 4) --- */
+/* Parent figures need to be relative to contain absolute children */
+.absolute-parent {
+    /* position: relative (for containing children) */
+    position: relative;
+    margin: 40px auto; 
+}
+
+/* position: absolute & bottom, right, z-index (REQUIRED) */
+.absolute-overlay {
+    /* Comment: This element uses absolute positioning */
+    position: absolute; 
+    /* bottom, right (REQUIRED) */
+    bottom: 0px; 
+    right: 0px; 
+    padding: 5px 10px;
+    /* Color Styling: HSLA - Opacity demonstration */
+    background: hsla(120, 50%, 40%, 0.9); 
+    color: white;
+    /*  z-index (REQUIRED) */
+    z-index: 10;
+    /* Typography: font-weight numeric value (REQUIRED) */
+    font-weight: 600; 
+}
+
+/* --- Float & Clear Demonstration (Artwork 2) --- */
+/* float: right (REQUIRED) */
+.float-art {
+    /* Comment: This artwork uses float: right to align itself next to its neighbor */
+    float: right;
+}
+
+/* clear: both (REQUIRED) */
+.clearfix {
+    /* Comment: This element uses clear: both to stop subsequent content from wrapping around a float */
+    clear: both;
+}
+
+/* --- Sticky Positioning Demonstration (Artwork 5) --- */
+/* position: sticky & top & z-index (REQUIRED) */
+.sticky-art {
+    /* Comment: This artwork uses sticky positioning, sticking to the viewport */
+    position: sticky; 
+    top: 50px; 
+    z-index: 10; 
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+
+/* -------------------------
+   CTA BOXES
+------------------------- */
+
+.cta-box-container {
+    text-align: center;
+    margin: 40px auto 80px; 
+}
+
+.cta-box-1 {
+    /* Color Styling: Named Color (REQUIRED) */
+    background-color: mediumseagreen; 
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    /* 3. Typography: text-align (REQUIRED) */
+    text-align: center; 
+}
+
+.cta-box-2 {
+    /* Color Styling: Transparent background (REQUIRED) */
+    background-color: transparent; 
+    /* Color Styling: Hexadecimal border */
+    border: 2px solid #6b8e23; /* Olive green border for nature */
+    color: #6b8e23;
+    padding: 8px 20px;
+    /* Typography: word-spacing (REQUIRED) */
+    word-spacing: 0.5em; 
+    /* Typography: font-style (REQUIRED) */
+    font-style: italic;
+}
+
+
+/* -------------------------
+   ABOUT PAGE STYLES
+------------------------- */
+
+.about-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 0;
+    text-align: center;
+}
+
+.sub-title {
+    /*  Typography: text-align & letter-spacing (REQUIRED) */
+    text-align: center; 
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
+}
+
+.info-text {
+    /*  Typography: text-align (REQUIRED) */
+    text-align: justify; 
+    margin-bottom: 50px;
+    /* Typography: line-height (REQUIRED) */
+    line-height: 1.8;
+}
+
+/* Blockquote style matching the screenshot's box */
+.quote-box {
+    background-color: #e6f0e6; /* Very pale green/blue */
+    /*  Color Styling: HSLA - Opacity demo (REQUIRED) */
+    border: 1px solid hsla(120, 30%, 50%, 0.8); 
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 80%;
+    /* Typography: font-style & text-align (REQUIRED) */
+    font-style: italic;
+    text-align: center; 
+}
+
+
+/* -------------------------
+   FOOTER
+------------------------- */
+
+/* 1. position: fixed & bottom, left, right (REQUIRED) */
+.fixed-footer {
+    /* Comment: This footer uses fixed positioning */
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    /*  z-index (REQUIRED) */
+    z-index: 100;
+    padding: 10px 0;
+    /* Color Styling: Hexadecimal (REQUIRED) */
+    background-color: #333; 
+    text-align: center;
+}
+
+.about-footer {
+    /* position: static (REQUIRED) */
+    position: static; 
+    /*  Color Styling: Hexadecimal (REQUIRED) */
+    background-color: #f7f7f7;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    margin-top: 50px;
+}
+
+.footer-text {
+    /* Color Styling: RGB (REQUIRED) */
+    color: rgb(200, 200, 200);
+    margin: 0;
+}

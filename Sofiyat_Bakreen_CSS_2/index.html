@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature Landscape Gallery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="nav-link">Home</a> 
+        <span class="nav-separator">|</span>
+        <a href="about.html" class="nav-link">About</a>
+    </nav>
+
+    <header class="header">
+        <h1>Nature Landscape Gallery</h1>
+    </header>
+
+    <main class="gallery-container">
+        
+        <section class="gallery-row relative-container row1">
+            
+            <figure class="art static-art inline-block-art">
+                <img src="artwork1.jpg" alt="Mountain stream landscape">
+                <figcaption>Nature 1 (Static)</figcaption>
+            </figure>
+
+            <figure class="art float-art inline-block-art">
+                <img src="artwork2.jpg" alt="Sunrise over a misty forest">
+                <figcaption>Nature 2 (Float Right)</figcaption>
+            </figure>
+            
+            <div class="clearfix"></div> 
+
+        </section>
+
+        <figure class="art relative-art">
+            <img src="artwork3.jpg" alt="Rolling green hills">
+            <figcaption class="relative-caption">Nature 3 (Relative & Z-index)</figcaption>
+        </figure>
+
+        <figure class="art absolute-parent">
+            <img src="artwork4.jpg" alt="Coastal view with rocks">
+            <figcaption>Nature 4 (Absolute Parent)</figcaption>
+            <div class="absolute-overlay">FINE PRINT</div> 
+        </figure>
+
+        <figure class="art sticky-art">
+            <img src="artwork5.jpg" alt="Desert vista at dusk">
+            <figcaption>Nature 5 (Sticky Position)</figcaption>
+        </figure>
+        
+        <section class="gallery-row bottom-row">
+            <figure class="art inline-block-art">
+                <img src="artwork6.jpg" alt="Rocky canyon view">
+                <figcaption>Nature 6</figcaption>
+            </figure>
+            <figure class="art inline-block-art">
+                <img src="artwork7.jpg" alt="Flowering meadow">
+                <figcaption>Nature 7</figcaption>
+            </figure>
+            <figure class="art inline-block-art">
+                <img src="artwork8.jpg" alt="Lakeside autumn colors">
+                <figcaption>Nature 8</figcaption>
+            </figure>
+            <figure class="art inline-block-art">
+                <img src="artwork9.jpg" alt="Snowy mountain peaks">
+                <figcaption>Nature 9</figcaption>
+            </figure>
+            <figure class="art inline-block-art">
+                <img src="artwork10.jpg" alt="Close-up of moss">
+                <figcaption>Nature 10</figcaption>
+            </figure>
+        </section>
+        
+        <div class="cta-box-container">
+             <div class="cta-box-1">Which one was your favorite?</div>
+             <div class="cta-box-2">View our latest offers.</div>
+        </div>
+
+    </main>
+
+    <footer class="fixed-footer">
+        <p class="footer-text">&copy; 2025 Nature Art Gallery</p>
+    </footer>
+
+</body>
+</html>
