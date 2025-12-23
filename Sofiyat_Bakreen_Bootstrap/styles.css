@@ -1,0 +1,38 @@
+/* Global styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* About Me image size */
+.about-img {
+  max-width: 280px;
+}
+
+/* Hero section */
+.hero {
+  background: url('../images/hero.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Section spacing */
+section {
+  padding: 70px 0;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* Footer icons */
+footer i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
